@@ -1,3 +1,4 @@
+
 nav ul {
     display: grid;
     grid-template-columns: auto auto auto auto auto;
@@ -69,3 +70,6 @@ nav ul {
     padding: 10px;
   }
   
+.kuva.logo{
+  padding-bottom: 25px;
+}

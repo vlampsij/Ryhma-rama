@@ -1,14 +1,9 @@
-body{
-    min-height: 100vh;
-    width: 100%;
-    background: #c8e8e9;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+
   .container{
+    margin-top: 2em;
+    margin-bottom: 2em;
     width: 85%;
-    background: #fff;
+    background: #0bbf6537;
     border-radius: 6px;
     padding: 20px 60px 30px 40px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -18,7 +13,7 @@ body{
     align-items: center;
     justify-content: space-between;
   }
-  .container .content .left-side{
+  .container .content .vasen{
     width: 25%;
     height: 100%;
     display: flex;
@@ -28,7 +23,7 @@ body{
     margin-top: 15px;
     position: relative;
   }
-  .content .left-side::before{
+  .content .vasen::before{
     content: '';
     position: absolute;
     height: 70%;
@@ -38,40 +33,40 @@ body{
     transform: translateY(-50%);
     background: #afafb6;
   }
-  .content .left-side .details{
+  .content .vasen .details{
     margin: 14px;
     text-align: center;
   }
-  .content .left-side .details i{
+  .content .vasen .details i{
     font-size: 30px;
     color: #3e2093;
     margin-bottom: 10px;
   }
-  .content .left-side .details .topic{
+  .content .vasen .details .otsikko{
     font-size: 18px;
     font-weight: 500;
   }
-  .content .left-side .details .text-one,
-  .content .left-side .details .text-two{
+  .content .vasen .details .text-one,
+  .content .vasen .details .text-two{
     font-size: 14px;
     color: #afafb6;
   }
-  .container .content .right-side{
+  .container .content .oikea{
     width: 75%;
     margin-left: 75px;
   }
-  .content .right-side .topic-text{
+  .content .oikea .otsikko-text{
     font-size: 23px;
     font-weight: 600;
     color: #3e2093;
   }
-  .right-side .input-box{
+  .oikea .teksti-boksi{
     height: 50px;
     width: 100%;
     margin: 12px 0;
   }
-  .right-side .input-box input,
-  .right-side .input-box textarea{
+  .oikea .teksti-boksi input,
+  .oikea .teksti-boksi textarea{
     height: 100%;
     width: 100%;
     border: none;
@@ -82,17 +77,17 @@ body{
     padding: 0 15px;
     resize: none;
   }
-  .right-side .message-box{
+  .oikea .message-box{
     min-height: 110px;
   }
-  .right-side .input-box textarea{
+  .oikea .teksti-boksi textarea{
     padding-top: 6px;
   }
-  .right-side .button{
+  .oikea .button{
     display: inline-block;
     margin-top: 12px;
   }
-  .right-side .button input[type="button"]{
+  .oikea .button input[type="button"]{
     color: #fff;
     font-size: 18px;
     outline: none;
@@ -105,37 +100,4 @@ body{
   }
   .button input[type="button"]:hover{
     background: #5029bc;
-  }
-  @media (max-width: 950px) {
-    .container{
-      width: 90%;
-      padding: 30px 40px 40px 35px ;
-    }
-    .container .content .right-side{
-     width: 75%;
-     margin-left: 55px;
-  }
-  }
-  @media (max-width: 820px) {
-    .container{
-      margin: 40px 0;
-      height: 100%;
-    }
-    .container .content{
-      flex-direction: column-reverse;
-    }
-   .container .content .left-side{
-     width: 100%;
-     flex-direction: row;
-     margin-top: 40px;
-     justify-content: center;
-     flex-wrap: wrap;
-   }
-   .container .content .left-side::before{
-     display: none;
-   }
-   .container .content .right-side{
-     width: 100%;
-     margin-left: 0;
-   }
   }
