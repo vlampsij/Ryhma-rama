@@ -73,3 +73,62 @@ nav ul {
 .kuva.logo{
   padding-bottom: 25px;
 }
+.kartta{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.toiminnat {grid-area: oikea;}
+.puhelin {grid-area: vasen;}
+.kartta {grid-area: ala;}
+.sisalto{
+  display: grid;
+  grid:
+  'vasen oikea oikea'
+  'vasen oikea oikea'
+  'ala ala ala';
+  border: solid 1px;
+  background-size: cover;
+  background-image: url('/img/kerrostalot.jpg');
+}
+.puhelin{
+  border: solid 1px black;
+  margin-right: 30em;
+  margin-left: 4em;
+  text-align: center;
+}
+.puhelin{
+  width: 25%;
+  height: 125%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  position: relative;
+  background-color: #0bbf6537;
+  padding: 10px;
+}
+
+.puhelin .details{
+  margin: 14px;
+  text-align: center;
+}
+.puhelin .details i{
+  font-size: 30px;
+  color: #3d1f91;
+  margin-bottom: 10px;
+}
+.puhelin .details .otsikko{
+  font-size: 18px;
+  font-weight: 500;
+}
+.puhelin .details .text-one,
+.puhelin .details .text-two{
+  font-size: 14px;
+  color: #000000;
+}
+.toiminnat{
+  border: solid 1px black;
+}
