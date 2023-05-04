@@ -85,12 +85,11 @@ nav ul {
 .sisalto{
   display: grid;
   grid:
-  'vasen oikea oikea'
-  'vasen oikea oikea'
-  'ala ala ala';
+  '. vasen oikea oikea . '
+  '. vasen oikea oikea .'
+  '. ala ala ala .';
   border: solid 1px;
-  background-size: cover;
-  background-image: url('/img/kerrostalot.jpg');
+
 }
 .puhelin{
   border: solid 1px black;
