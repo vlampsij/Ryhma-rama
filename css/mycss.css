@@ -1,75 +1,143 @@
 
 nav ul {
-    display: grid;
-    grid-template-columns: auto auto auto auto auto;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    background-color: #f1f1f1;
-    margin-left: 4em;
-    margin-right: 4em;
-  }
-  
-  nav li {
-    display: inline-block;
-  }
-  
-  nav li a {
-    display: block;
-    padding: 12px;
-    color: #333;
-    text-decoration: none;
-    text-align: center;
-  }
-  
-  nav li:hover {
-    background-color: #ddd;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    z-index: 1;
-    background-color: #f9f9f9;
-    width: min-content;
-  }
-  
-  .dropdown-content a {
-    display: block;
-    padding: 12px;
-    color: #333;
-    text-decoration: none;
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  
-  .linkki:hover {
-    background-color: green;
-  }
-
-  .kuva {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #logo {
-    max-width: auto;
-    max-height: auto;
-    display: block;
-  }
-
-  .footer {
-    display: grid;
-    grid-template-columns: auto;
-    background-color:#f1f1f1;
-    color:#000000;
-    text-align: center;
-    padding: 10px;
-  }
-  
-.kuva.logo{
-  padding-bottom: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #f1f1f1;
+  margin-left: 4em;
+  margin-right: 4em;
 }
+
+nav li {
+  flex: auto;
+  
+}
+
+nav li a {
+  display: block;
+  padding: 12px;
+  color: #333;
+  text-decoration: none;
+  text-align: center;
+}
+
+nav li:hover {
+  background-color: #ddd;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  background-color: #f9f9f9;
+  width: min-content;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 12px;
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.linkki:hover {
+  background-color: green;
+}
+
+.kuva {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#logo {
+  max-width: auto;
+  max-height: auto;
+  display: block;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: auto;
+  background-color:#f1f1f1;
+  color:#000000;
+  text-align: center;
+  padding: 10px;
+}
+
+.kuva.logo{
+padding-bottom: 25px;
+}
+.kartta{
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+background: #0bbf6537;
+border-radius: 6px;
+padding: 20px 60px 30px 40px;
+box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+margin-left: 4em;
+margin-right: 4em;
+}
+.sisalto{
+flex: auto;
+display: grid;
+grid-template-columns: auto auto auto;
+width: fit-content;
+margin-left: 4em;
+margin-right: 4em;
+margin-top: 2em;
+margin-bottom: 2em;
+background: #0bbf6537;
+border-radius: 6px;
+padding: 20px 60px 30px 40px;
+box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.puhelin{
+flex: auto;
+margin-right: 3em;
+margin-bottom: 4em;
+text-align: center;
+padding: 25%;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+margin-top: 15px;
+border-right: solid black;
+}
+.puhelin .details{
+margin: 14px;
+text-align: center;
+}
+.puhelin .details i{
+font-size: 30px;
+color: #3d1f91;
+margin-bottom: 10px;
+}
+.puhelin .details .otsikko{
+font-size: 18px;
+font-weight: 500;
+}
+.puhelin .details .text-one,
+.puhelin .details .text-two{
+font-size: 14px;
+color: #000000;
+}
+.toiminnat {
+  margin-top: 2em;
+}
+#tarra{
+  width: 35%;
+  height: auto;
+  float: right;
+}
+
+
