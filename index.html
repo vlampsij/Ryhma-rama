@@ -22,15 +22,20 @@
   <body>
 
     <div class="kuva logo">
-        <a href="index.html"><img src="img/logo.png" alt="Kiinteistöhuolto R. Autio Oy" id="logo"></a>
+        <a href="index.html"><img src="img/logo.png" alt="Kiinteistöhuolto R. Autio Oy" id="logo" class="img-fluid"></a>
     </div>
-    <nav>
+    <nav class="navbar sticky-top navbar-expand-sm">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mynavbar"></div>
       <ul>
-        <li><a href="index.html">Etusivu</a></li>
-        <li><a href="yhteystiedot.html">Yhteystiedot</a></li>
-        <li><a href="#">Referenssit</a></li>
-        <li><a href="#">Ota yhteyttä</a></li>
-        <li class="dropdown">
+        <li class="nav-item"><a href="index.html">Etusivu</a></li>
+        <li class="nav-item"><a href="yhteystiedot.html">Yhteystiedot</a></li>
+        <li class="nav-item"><a href="#">Referenssit</a></li>
+        <li class="nav-item"><a href="#">Ota yhteyttä</a></li>
+        <li class="dropdown nav-item">
           <a href="#">Kirjaudu</a>
           <div class="dropdown-content">
             <a class="linkki" href="#">Asukas</a>
@@ -40,6 +45,8 @@
           </div>
         </li>
       </ul>
+      </div>
+    </div>
     </nav>
 
       <div class="toiminnat">
