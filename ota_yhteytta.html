@@ -25,25 +25,31 @@
   <body>
 
     <div class="kuva logo">
-        <a href="index.html"><img src="img/logo.png" alt="Kiinteistöhuolto R. Autio Oy" id="logo"></a>
-    </div>
-    <nav>
-        <ul>
-          <li><a href="index.html">Etusivu</a></li>
-          <li><a href="yhteystiedot.html">Yhteystiedot</a></li>
-          <li><a href="#">Referenssit</a></li>
-          <li><a href="ota_yhteytta">Ota yhteyttä</a></li>
-          <li class="dropdown">
-            <a href="#">Kirjaudu</a>
-            <div class="dropdown-content">
-              <a class="linkki" href="#">Asukas</a>
-              <a class="linkki" href="#">Isännöitsijä</a>
-              <a class="linkki" href="#">Asiakas</a>
-              <a class="linkki" href="#">Työntekijä</a>
-            </div>
-          </li>
-        </ul>
-      </nav>
+      <a href="index.html"><img src="img/logo.png" alt="Kiinteistöhuolto R. Autio Oy" id="logo" class="img-fluid"></a>
+  </div>
+  <nav class=" sticky-top navbar-expand-sm">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mynavbar"></div>
+  <ul>
+    <li class="nav-item"><a href="index.html">Etusivu</a></li>
+    <li class="nav-item"><a href="yhteystiedot.html">Yhteystiedot</a></li>
+    <li class="nav-item"><a href="#">Referenssit</a></li>
+    <li class="nav-item"><a href="ota_yhteytta.html">Ota yhteyttä</a></li>
+    <li class="dropdown nav-item">
+      <a href="#">Kirjaudu</a>
+      <div class="dropdown-content">
+        <a class="linkki" href="backend/login.php">Asukas</a>
+        <a class="linkki" href="backend/login.php">Isännöitsijä</a>
+        <a class="linkki" href="backend/login.php">Asiakas</a>
+        <a class="linkki" href="backend/login.php">Työntekijä</a>
+      </div>
+    </li>
+  </ul>
+  
+</div>
+</nav>
 
       
         <div class="container container-fluid">
