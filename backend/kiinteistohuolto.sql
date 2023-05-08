@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 04.05.2023 klo 10:53
+-- Generation Time: 08.05.2023 klo 20:10
 -- Palvelimen versio: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -134,7 +134,8 @@ INSERT INTO `tyontekijat` (`tyontekijaid`, `nimi`, `tunnusid`, `tilaid`) VALUES
 CREATE TABLE `vikailmoitukset` (
   `vikaid` int(11) NOT NULL,
   `vika` text NOT NULL,
-  `status` int(11) NOT NULL,
+  `osoite` varchar(30) NOT NULL,
+  `status` int(11) NOT NULL DEFAULT 1,
   `tekija` int(11) NOT NULL,
   `tyontekijaid` int(11) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
@@ -143,8 +144,8 @@ CREATE TABLE `vikailmoitukset` (
 -- Vedos taulusta `vikailmoitukset`
 --
 
-INSERT INTO `vikailmoitukset` (`vikaid`, `vika`, `status`, `tekija`, `tyontekijaid`) VALUES
-(1, 'Hana vuotaa', 1, 3, 1);
+INSERT INTO `vikailmoitukset` (`vikaid`, `vika`, `osoite`, `status`, `tekija`, `tyontekijaid`) VALUES
+(1, 'Hana vuotaa', '', 1, 3, 1);
 
 --
 -- Indexes for dumped tables
