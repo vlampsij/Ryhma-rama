@@ -21,7 +21,7 @@
     <!--<script src="js/myScript.js"></script>-->
     <link rel="stylesheet" href="css/mycss.css">
     <title>Kiinteistöhuolto R. Autio Oy</title>
-    <link href="css/sign-in.css" rel="stylesheet">
+    <link href="/css/sign-in.css" rel="stylesheet">
   </head>
   <body class="text-center">
 
