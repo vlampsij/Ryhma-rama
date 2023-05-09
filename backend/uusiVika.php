@@ -9,6 +9,7 @@
      <div class="container">
         <h1>Vikailmoitus</h1>
         <a href="index.php">Takaisin listaan</a>
+        <a href="logout.php">Kirjaudu ulos</a>
         <?php if(!isset($_SESSION['rooli']) OR $_SESSION['rooli'] == "asukas" OR $_SESSION['rooli'] == "isännöitsijä"): ?>
         <h3>Lisää vika</h3>
         <table class="table-bordered">

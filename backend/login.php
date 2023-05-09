@@ -55,23 +55,23 @@
 
     
     <main class="form-signin w-100 m-auto  mb-3">
-    <form action="credcheck.php" method="POST">
+    <form method="POST" action="credcheck.php">
 
           <h1 class="h3 mb-3 fw-normal">Kirjaudu sisään</h1>
       
           <div class="form-floating ">
             <label for="tunnus">Tunnus</label>
-            <input type="text" class="form-control mb-3" id="tunnus" placeholder="Tunnus" required>
+            <input type="text" class="form-control mb-3" name="tunnus" placeholder="Tunnus">
             
           </div>
           <div class="form-floating ">
             <label for="salasana">Salasana</label>
-            <input type="password" class="form-control" name="salasana" placeholder="Salasana" required>
+            <input type="password" class="form-control" name="salasana" placeholder="Salasana">
             
           </div>
       
 
-          <button class="w-100 btn btn-lg btn-primary" type="submit">Kirjaudu</button>
+          <button name="submit" class="w-100 btn btn-lg btn-primary" type="submit">Kirjaudu</button>
           
         </form>
       </main>
