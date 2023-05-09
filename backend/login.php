@@ -55,6 +55,7 @@
 
     
     <main class="form-signin w-100 m-auto  mb-3">
+    <?php if(!isset($_SESSION['tunnus'])){ ?>
     <form method="POST" action="credcheck.php">
 
           <h1 class="h3 mb-3 fw-normal">Kirjaudu sisään</h1>
@@ -74,6 +75,9 @@
           <button name="submit" class="w-100 btn btn-lg btn-primary" type="submit">Kirjaudu</button>
           
         </form>
+        <?php }else{echo "olet jo kirjautunut"; ?>
+          <br><a href="logout.php">Kirjaudu ulos</a>
+        <?php } ?>
       </main>
 
     

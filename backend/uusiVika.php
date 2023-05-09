@@ -8,9 +8,10 @@
     <body>
      <div class="container">
         <h1>Vikailmoitus</h1>
-        <a href="index.php">Takaisin listaan</a>
+        <a href="index.php">Takaisin</a>
+        <?php error_reporting(0);
+        if(isset($_SESSION['tunnus']) OR $_SESSION['rooli'] == "asukas" OR $_SESSION['rooli'] == "isännöitsijä"){ ?>
         <a href="logout.php">Kirjaudu ulos</a>
-        <?php if(!isset($_SESSION['rooli']) OR $_SESSION['rooli'] == "asukas" OR $_SESSION['rooli'] == "isännöitsijä"): ?>
         <h3>Lisää vika</h3>
         <table class="table-bordered">
             <form action="lisaaVika.php" method="POST">
@@ -32,9 +33,10 @@
                 </tr>
             </form>
         </table>
-        <?php else: ?>
-            <p>Ei oikeuksia</p>
-        <?php endif; ?>
+        
+        <?php }else{ ?>
+            <p>Tunnuksella ei oikeuksia nähdä sivua</p>
+        <?php } ?>
      </div>
     </body>
 </html>
