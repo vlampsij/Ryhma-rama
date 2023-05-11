@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 08.05.2023 klo 20:10
+-- Generation Time: 11.05.2023 klo 23:57
 -- Palvelimen versio: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -147,6 +147,19 @@ CREATE TABLE `vikailmoitukset` (
 INSERT INTO `vikailmoitukset` (`vikaid`, `vika`, `osoite`, `status`, `tekija`, `tyontekijaid`) VALUES
 (1, 'Hana vuotaa', '', 1, 3, 1);
 
+-- --------------------------------------------------------
+
+--
+-- Rakenne taululle `yhteydenottopyynnot`
+--
+
+CREATE TABLE `yhteydenottopyynnot` (
+  `pyyntoid` int(11) NOT NULL,
+  `nimi` varchar(30) NOT NULL,
+  `sposti` varchar(30) NOT NULL,
+  `viesti` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
 --
 -- Indexes for dumped tables
 --
@@ -194,6 +207,12 @@ ALTER TABLE `vikailmoitukset`
   ADD KEY `tekija` (`tekija`);
 
 --
+-- Indexes for table `yhteydenottopyynnot`
+--
+ALTER TABLE `yhteydenottopyynnot`
+  ADD PRIMARY KEY (`pyyntoid`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -232,6 +251,12 @@ ALTER TABLE `tyontekijat`
 --
 ALTER TABLE `vikailmoitukset`
   MODIFY `vikaid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `yhteydenottopyynnot`
+--
+ALTER TABLE `yhteydenottopyynnot`
+  MODIFY `pyyntoid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Rajoitteet vedostauluille
