@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 11.05.2023 klo 23:57
+-- Generation Time: 12.05.2023 klo 00:33
 -- Palvelimen versio: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -161,6 +161,13 @@ CREATE TABLE `yhteydenottopyynnot` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
+-- Vedos taulusta `yhteydenottopyynnot`
+--
+
+INSERT INTO `yhteydenottopyynnot` (`pyyntoid`, `nimi`, `sposti`, `viesti`) VALUES
+(1, 'A', 'B', 'C');
+
+--
 -- Indexes for dumped tables
 --
 
@@ -256,7 +263,7 @@ ALTER TABLE `vikailmoitukset`
 -- AUTO_INCREMENT for table `yhteydenottopyynnot`
 --
 ALTER TABLE `yhteydenottopyynnot`
-  MODIFY `pyyntoid` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `pyyntoid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Rajoitteet vedostauluille

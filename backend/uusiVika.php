@@ -8,7 +8,7 @@
     <body>
      <div class="container">
         <h1>Vikailmoitus</h1>
-        <a href="index.php">Takaisin</a>
+        <a href="../index.html">Takaisin</a>
         <?php error_reporting(0);
         if(isset($_SESSION['tunnus']) OR $_SESSION['rooli'] == "asukas" OR $_SESSION['rooli'] == "isännöitsijä"){ ?>
         <a href="logout.php">Kirjaudu ulos</a>

@@ -40,12 +40,12 @@ if(isset($_POST['submit'])){
                     $_SESSION['tunnus'] = $data['tunnus'];
                     $_SESSION['tunnusid'] = $data['tunnusid'];
                     $_SESSION['rooli'] == "isännöitsijä";
-                    header("location: uusiVika.php");
+                    header("location: isannoitsija.php");
                 }elseif($data['rooliid'] == 4){
                     $_SESSION['tunnus'] = $data['tunnus'];
                     $_SESSION['tunnusid'] = $data['tunnusid'];
                     $_SESSION['rooli'] == "työntekijä";
-                    header("location: uusiVika.php");
+                    header("location: tyontekija.php");
                 }else{
                     echo "tunnuksilla ei oikeuksia mihinkään";
                     header("location: login.php");
