@@ -75,18 +75,18 @@
             <div class="oikea">
               <div class="otsikko-text">Lähetä meille viesti</div>
               <br>
-            <form action="#" method="get">
+            <form action="backend/pyynto.php" method="POST">
               <div class="teksti-boksi">
-                <input type="text" placeholder="Nimi">
+                <input type="text" name="nimi" placeholder="Nimi">
               </div>
               <div class="teksti-boksi">
-                <input type="text" placeholder="Sähköposti">
+                <input type="text" name="sposti" placeholder="Sähköposti">
               </div>
               <div class="teksti-boksi message-box">
-                <input class="teksti-boksi" placeholder="Kirjoita tähän viestisi!">
+                <input class="teksti-boksi" name="viesti" placeholder="Kirjoita tähän viestisi!">
               </div>
               <div class="button">
-                <input type="button" value="Lähetä">
+                <input type="submit" class="btn bg-primary" name="laheta" value="Lähetä">
               </div>
             </form>
           </div>

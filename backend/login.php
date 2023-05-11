@@ -19,14 +19,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <!--<script src="js/myScript.js"></script>-->
-    <link rel="stylesheet" href="css/mycss.css">
+    <link rel="stylesheet" href="../css/mycss.css">
     <title>Kiinteistöhuolto R. Autio Oy</title>
-    <link href="/css/sign-in.css" rel="stylesheet">
+    <link href="../css/sign-in.css" rel="stylesheet">
   </head>
   <body class="text-center">
 
     <div class="kuva logo">
-        <a href="index.html"><img src="img/logo.png" alt="Kiinteistöhuolto R. Autio Oy" id="logo" class="img-fluid"></a>
+        <a href="index.html"><img src="../img/logo.png" alt="Kiinteistöhuolto R. Autio Oy" id="logo" class="img-fluid"></a>
     </div>
 
     <nav class=" sticky-top navbar-expand-sm">
@@ -35,10 +35,10 @@
         </button>
         <div class="collapse navbar-collapse" id="mynavbar"></div>
       <ul>
-        <li class="nav-item"><a href="index.html">Etusivu</a></li>
-        <li class="nav-item"><a href="yhteystiedot.html">Yhteystiedot</a></li>
-        <li class="nav-item"><a href="#">Referenssit</a></li>
-        <li class="nav-item"><a href="ota_yhteytta.html">Ota yhteyttä</a></li>
+        <li class="nav-item"><a href="../index.html">Etusivu</a></li>
+        <li class="nav-item"><a href="../yhteystiedot.html">Yhteystiedot</a></li>
+        <li class="nav-item"><a href="../referenssit.html">Referenssit</a></li>
+        <li class="nav-item"><a href="../ota_yhteytta.html">Ota yhteyttä</a></li>
         <li class="dropdown nav-item">
           <a href="#">Kirjaudu</a>
           <div class="dropdown-content">
