@@ -42,10 +42,10 @@
         <li class="dropdown nav-item">
           <a href="#">Kirjaudu</a>
           <div class="dropdown-content">
-            <a class="linkki" href="login.php">Asukas</a>
-            <a class="linkki" href="login.php">Isännöitsijä</a>
-            <a class="linkki" href="login.php">Asiakas</a>
-            <a class="linkki" href="login.php">Työntekijä</a>
+            <a class="linkki" href="#">Asukas</a>
+            <a class="linkki" href="#">Isännöitsijä</a>
+            <a class="linkki" href="#">Asiakas</a>
+            <a class="linkki" href="#">Työntekijä</a>
           </div>
         </li>
       </ul>
@@ -55,44 +55,34 @@
 
     
     <main class="form-signin w-100 m-auto  mb-3">
-    <?php if(!$_SESSION['rooli'] == "isännöitsijä"){ ?>
-    <form method="POST" action="lisaaTunnus.php">
+    <?php if($_SESSION['rooli'] == "tyontekija"){ ?>
+    <form method="POST" action="lisaaTyontekija.php">
 
-          <h1 class="h3 mb-3 fw-normal">Luo tunnus</h1>
+          <h1 class="h3 mb-3 fw-normal">Tyontekijän tiedot</h1>
       
           <div class="form-floating ">
-            <label for="tunnus">Tunnus</label>
-            <input type="text" class="form-control mb-3" name="tunnus" placeholder="Tunnus" required>
+            <label for="tunnusid">Tunnus ID</label>
+            <input type="text" class="form-control mb-3" name="tunnusid" value="<?php echo $_SESSION['tunnusid']?>" readonly>
             
           </div>
           <div class="form-floating ">
-            <label for="salasana">Salasana</label>
-            <input type="password" class="form-control" name="salasana" placeholder="Salasana" required>
+            <label for="nimi">Nimi</label>
+            <input type="password" class="form-control" name="nimi" placeholder="Nimi" required>
             
           </div>
-
           <div class="form-floating ">
-            <label for="salasana">rooli</label>
-            <select class="form-control" name="rooliid" required>
-                <option value="1">asukas</option>
-                <option value="2">asiakas</option>
-                <option value="3">isännöitsijä</option>
-                <option value="4">työntekijä</option>
+            <label for="tilaid">rooli</label>
+            <select class="form-control" name="tilaid" required>
+                <option value="1">Vapaa</option>
+                <option value="2">Varattu</option>
             </select>
             
           </div>
 
-          <div class="form-floating ">
-            <label for="nimi">Nimi</label>
-            <input type="text" class="form-control mb-3" name="nimi" placeholder="Nimi">
-            
-          </div>
-      
-
-          <button name="submit" class="w-100 btn btn-lg btn-primary" type="submit">Lisää</button>
+          <button name="submit" class="w-100 btn btn-lg btn-primary" type="submit">Muokkaa</button>
           
         </form>
-        <?php }else{echo "Et ole isännöitsijä"; ?>
+        <?php }else{error_reporting(0); echo "Et ole työntekijä"; ?>
           <br><a href="logout.php">Kirjaudu ulos</a>
         <?php } ?>
       </main>

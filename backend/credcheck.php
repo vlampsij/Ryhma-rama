@@ -19,8 +19,7 @@ if(isset($_POST['submit'])){
 
         //tsekkaa salasanan, hakee rooliid:n ja ohjaa asianmukaiselle sivulle
         if($login->rowCount() > 0){
-            if($salasana == $data['salasana']){
-                // password_verify($salasana, $data['salasana'])
+            if(password_verify($salasana, $data['salasana'])){
                 echo "ok";
                 if($data['tunnusid'] == 1){
                     echo "tunnuksilla ei oikeuksia mihinkään";
@@ -44,8 +43,8 @@ if(isset($_POST['submit'])){
                 }elseif($data['rooliid'] == 4){
                     $_SESSION['tunnus'] = $data['tunnus'];
                     $_SESSION['tunnusid'] = $data['tunnusid'];
-                    $_SESSION['rooli'] == "työntekijä";
-                    header("location: tyontekija.php");
+                    $_SESSION['rooli'] == "tyontekija";
+                    header("location: uusiTyontekija.php");
                 }else{
                     echo "tunnuksilla ei oikeuksia mihinkään";
                     header("location: login.php");
