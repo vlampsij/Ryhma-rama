@@ -28,22 +28,22 @@ if(isset($_POST['submit'])){
                 if($data['rooliid'] == 1){
                     $_SESSION['tunnus'] = $data['tunnus'];
                     $_SESSION['tunnusid'] = $data['tunnusid'];
-                    $_SESSION['rooli'] == "asukas";
+                    $_SESSION['rooli'] = "asukas";
                     header("location: http://localhost/vlampsij.github.io/backend/uusiVika.php");
                 }elseif($data['rooliid'] == 2){
                     $_SESSION['tunnus'] = $data['tunnus'];
                     $_SESSION['tunnusid'] = $data['tunnusid'];
-                    $_SESSION['rooli'] == "asiakas";
+                    $_SESSION['rooli'] = "asiakas";
                     header("location: http://localhost/vlampsij.github.io/backend/yhteydenotto.php");
                 }elseif($data['rooliid'] == 3){
                     $_SESSION['tunnus'] = $data['tunnus'];
                     $_SESSION['tunnusid'] = $data['tunnusid'];
-                    $_SESSION['rooli'] == "isännöitsijä";
+                    $_SESSION['rooli'] = "isännöitsijä";
                     header("location: http://localhost/vlampsij.github.io/backend/isannoitsija.php");
                 }elseif($data['rooliid'] == 4){
                     $_SESSION['tunnus'] = $data['tunnus'];
                     $_SESSION['tunnusid'] = $data['tunnusid'];
-                    $_SESSION['rooli'] == "tyontekija";
+                    $_SESSION['rooli'] = "tyontekija";
                     header("location: http://localhost/vlampsij.github.io/backend/uusiTyontekija.php");
                 }else{
                     echo "tunnuksilla ei oikeuksia mihinkään";
