@@ -1,0 +1,32 @@
+.yksi{
+    background-color: rgba(0, 17, 255, 0.171);
+}
+.nimet{
+    
+    margin-top: 5em;
+    margin-bottom: 3em;
+    padding: 1em;
+}
+h3{
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-left: 3em;
+    padding-top: 1em;
+}
+
+.next{
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+.kaksi{
+    background-color: rgba(165, 42, 42, 0.201);
+}
+.kolme{
+    background-color: rgba(255, 244, 125, 0.394);
+}
+
+.neljä{
+
+background-color: rgba(128, 255, 0, 0.402);
+}
