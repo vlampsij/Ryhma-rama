@@ -11,7 +11,7 @@
         <a href="../index.html">Takaisin</a>
         <?php error_reporting(0);
         if(isset($_SESSION['tunnus']) OR $_SESSION['rooli'] == "asukas" OR $_SESSION['rooli'] == "isännöitsijä"){ ?>
-        <a href="logout.php">Kirjaudu ulos</a>
+        <a href="http://localhost/vlampsij.github.io/backend/logout.php">Kirjaudu ulos</a>
         <h3>Lisää vika</h3>
         <table class="table-bordered">
             <form action="lisaaVika.php" method="POST">

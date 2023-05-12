@@ -19,6 +19,6 @@ if(isset($_POST['submit'])){
 
 echo "Yhteydenottopyyntösi on vastaanotettu.";
 sleep(2);
-header("location: register.php");
+header("location: http://localhost/vlampsij.github.io/backend/register.php");
 
 ?>

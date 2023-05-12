@@ -33,6 +33,6 @@ if(isset($_POST['submit'])){
 
 echo "Tila päivitetty.";
 sleep(2);
-header("location: uusiTyontekija.php");
+header("location: http://localhost/vlampsij.github.io/backend/uusiTyontekija.php");
 
 ?>

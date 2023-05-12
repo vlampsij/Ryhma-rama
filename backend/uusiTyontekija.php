@@ -83,7 +83,7 @@
           
         </form>
         <?php }else{error_reporting(0); echo "Et ole työntekijä"; ?>
-          <br><a href="logout.php">Kirjaudu ulos</a>
+          <br><a href="http://localhost/vlampsij.github.io/backend/logout.php">Kirjaudu ulos</a>
         <?php } ?>
       </main>
 

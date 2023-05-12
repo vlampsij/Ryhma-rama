@@ -42,10 +42,10 @@
         <li class="dropdown nav-item">
           <a href="#">Kirjaudu</a>
           <div class="dropdown-content">
-            <a class="linkki" href="login.php">Asukas</a>
-            <a class="linkki" href="login.php">Isännöitsijä</a>
-            <a class="linkki" href="login.php">Asiakas</a>
-            <a class="linkki" href="login.php">Työntekijä</a>
+            <a class="linkki" href="http://localhost/vlampsij.github.io/backend/login.php">Asukas</a>
+            <a class="linkki" href="http://localhost/vlampsij.github.io/backend/login.php">Isännöitsijä</a>
+            <a class="linkki" href="http://localhost/vlampsij.github.io/backend/login.php">Asiakas</a>
+            <a class="linkki" href="http://localhost/vlampsij.github.io/backend/login.php">Työntekijä</a>
           </div>
         </li>
       </ul>
@@ -56,7 +56,7 @@
     
     <main class="form-signin w-100 m-auto  mb-3">
     <?php if(!$_SESSION['rooli'] == "isännöitsijä"){ ?>
-    <form method="POST" action="lisaaTunnus.php">
+    <form method="POST" action="http://localhost/vlampsij.github.io/backend/lisaaTunnus.php">
 
           <h1 class="h3 mb-3 fw-normal">Luo tunnus</h1>
       
@@ -93,7 +93,7 @@
           
         </form>
         <?php }else{echo "Et ole isännöitsijä"; ?>
-          <br><a href="logout.php">Kirjaudu ulos</a>
+          <br><a href="http://localhost/vlampsij.github.io/backend/logout.php">Kirjaudu ulos</a>
         <?php } ?>
       </main>
 

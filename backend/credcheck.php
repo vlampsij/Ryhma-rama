@@ -23,31 +23,31 @@ if(isset($_POST['submit'])){
                 echo "ok";
                 if($data['tunnusid'] == 1){
                     echo "tunnuksilla ei oikeuksia mihinkään";
-                    header("location: login.php");
+                    header("location: http://localhost/vlampsij.github.io/backend/login.php");
                 }
                 if($data['rooliid'] == 1){
                     $_SESSION['tunnus'] = $data['tunnus'];
                     $_SESSION['tunnusid'] = $data['tunnusid'];
                     $_SESSION['rooli'] == "asukas";
-                    header("location: uusiVika.php");
+                    header("location: http://localhost/vlampsij.github.io/backend/uusiVika.php");
                 }elseif($data['rooliid'] == 2){
                     $_SESSION['tunnus'] = $data['tunnus'];
                     $_SESSION['tunnusid'] = $data['tunnusid'];
                     $_SESSION['rooli'] == "asiakas";
-                    header("location: yhteydenotto.php");
+                    header("location: http://localhost/vlampsij.github.io/backend/yhteydenotto.php");
                 }elseif($data['rooliid'] == 3){
                     $_SESSION['tunnus'] = $data['tunnus'];
                     $_SESSION['tunnusid'] = $data['tunnusid'];
                     $_SESSION['rooli'] == "isännöitsijä";
-                    header("location: isannoitsija.php");
+                    header("location: http://localhost/vlampsij.github.io/backend/isannoitsija.php");
                 }elseif($data['rooliid'] == 4){
                     $_SESSION['tunnus'] = $data['tunnus'];
                     $_SESSION['tunnusid'] = $data['tunnusid'];
                     $_SESSION['rooli'] == "tyontekija";
-                    header("location: uusiTyontekija.php");
+                    header("location: http://localhost/vlampsij.github.io/backend/uusiTyontekija.php");
                 }else{
                     echo "tunnuksilla ei oikeuksia mihinkään";
-                    header("location: login.php");
+                    header("location: http://localhost/vlampsij.github.io/backend/login.php");
                 }
             }else{
                 echo "virheellinen tunnus tai salasana";

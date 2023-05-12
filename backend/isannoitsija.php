@@ -11,14 +11,14 @@
         <a href="../index.html">Takaisin</a>
         <?php
         if($_SESSION['rooli'] == "isännöitsijä"){ ?>
-        <a href="logout.php">Kirjaudu ulos</a><br>
+        <a href="http://localhost/vlampsij.github.io/backend/logout.php">Kirjaudu ulos</a><br>
         <h3>Valitse isännöitsijän toiminto</h3>
         <div>
-            <a href="uusiVika.php">Jätä virheilmoitus</a>
+            <a href="http://localhost/vlampsij.github.io/backend/uusiVika.php">Jätä virheilmoitus</a>
         </div>
         <br>
         <div>
-            <a href="register.php">Lisää tunnus</a>
+            <a href="http://localhost/vlampsij.github.io/backend/register.php">Lisää tunnus</a>
         </div>
         
         <?php }else{ ?>

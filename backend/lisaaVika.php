@@ -16,6 +16,6 @@ if(isset($_POST['talleta'])){
     
 }
 
-header("location:index.php");
+header("location: http://localhost/vlampsij.github.io/backend/index.php");
 
 ?>

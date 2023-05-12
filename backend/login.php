@@ -42,10 +42,10 @@
         <li class="dropdown nav-item">
           <a href="#">Kirjaudu</a>
           <div class="dropdown-content">
-            <a class="linkki" href="#">Asukas</a>
-            <a class="linkki" href="#">Isännöitsijä</a>
-            <a class="linkki" href="#">Asiakas</a>
-            <a class="linkki" href="#">Työntekijä</a>
+            <a class="linkki" href="http://localhost/vlampsij.github.io/backend/login">Asukas</a>
+            <a class="linkki" href="http://localhost/vlampsij.github.io/backend/login">Isännöitsijä</a>
+            <a class="linkki" href="http://localhost/vlampsij.github.io/backend/login">Asiakas</a>
+            <a class="linkki" href="http://localhost/vlampsij.github.io/backend/login">Työntekijä</a>
           </div>
         </li>
       </ul>
@@ -76,7 +76,7 @@
           
         </form>
         <?php }else{echo "olet jo kirjautunut"; ?>
-          <br><a href="logout.php">Kirjaudu ulos</a>
+          <br><a href="http://localhost/vlampsij.github.io/backend/logout.php">Kirjaudu ulos</a>
         <?php } ?>
       </main>
 
