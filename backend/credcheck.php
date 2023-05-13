@@ -44,7 +44,7 @@ if(isset($_POST['submit'])){
                     $_SESSION['tunnus'] = $data['tunnus'];
                     $_SESSION['tunnusid'] = $data['tunnusid'];
                     $_SESSION['rooli'] = "tyontekija";
-                    header("location: http://localhost/vlampsij.github.io/backend/uusiTyontekija.php");
+                    header("location: http://localhost/vlampsij.github.io/backend/tyontekija.php");
                 }else{
                     echo "tunnuksilla ei oikeuksia mihinkään";
                     header("location: http://localhost/vlampsij.github.io/backend/login.php");

@@ -25,7 +25,7 @@
                 </tr>
                 <tr>
                     <td>Ilmoituksen tekijä</td>
-                    <td><input type="text" name="tekija" readonly><?php echo $_SESSION['tunnus']; ?></td>
+                    <td><input type="text" name="tekija" required></td>
                 </tr>
                 <tr>
                     <td></td>

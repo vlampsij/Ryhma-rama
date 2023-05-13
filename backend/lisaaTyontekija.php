@@ -16,15 +16,15 @@ if(isset($_POST['submit'])){
         $lisaa = $conn->prepare($komento);
         $lisaa->execute([
             ':tunnusid' => $tunnusid,
-            'tilaid' => $tilaid,
-            'nimi' => $nimi
+            ':tilaid' => $tilaid,
+            ':nimi' => $nimi
         ]);
     }else{
         $komento = "UPDATE tyontekijat SET nimi = :nimi, tilaid = :tilaid WHERE tunnusid = :tunnusid";
         $lisaa = $conn->prepare($komento);
         $lisaa->execute([
-            'nimi' => $nimi,
-            'tilaid' => $tilaid,
+            ':nimi' => $nimi,
+            ':tilaid' => $tilaid,
             ':tunnusid' => $tunnusid
         ]);
     }

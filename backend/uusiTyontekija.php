@@ -67,7 +67,7 @@
           </div>
           <div class="form-floating ">
             <label for="nimi">Nimi</label>
-            <input type="password" class="form-control" name="nimi" placeholder="Nimi" required>
+            <input type="text" class="form-control" name="nimi" placeholder="Nimi" required>
             
           </div>
           <div class="form-floating ">
