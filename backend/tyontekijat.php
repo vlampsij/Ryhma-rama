@@ -22,6 +22,19 @@
     <link rel="stylesheet" href="../css/mycss.css">
     <title>Kiinteistöhuolto R. Autio Oy</title>
     <link href="../css/sign-in.css" rel="stylesheet">
+
+    <style>
+      table{
+        margin-top: 1.5em;
+      }
+        
+        table{
+            font-size: 17px;
+           
+        }
+        
+
+    </style>
   </head>
   <body class="text-center">
 
@@ -51,7 +64,7 @@
     <main class="form-signin w-100 m-auto  mb-3">
         <div>
 <?php if($_SESSION['rooli'] == "isannoitsija"){ ?>
-      <table class="table table-striped">
+      <table class="table table-striped table-bordered">
       <tr>
          <th>Työntekijä ID</th>
          <th>Nimi</th>
@@ -73,7 +86,7 @@
                         <td><?php echo $tyontekija['Tyontekijaid']; ?></td>
                         <td><?php echo $tyontekija['Nimi']; ?></td>
                         <td><?php echo $tyontekija['Tila']; ?></td>
-                        <td><?php echo'<a href="poistaTyontekija.php?tyontekijaid='.$tyontekija['Tyontekijaid'].'" class="btn btn-primary">Poista</a>';?></td>
+                        <td><?php echo'<a href="poistaTyontekija.php?tyontekijaid='.$tyontekija['Tyontekijaid'].'" class="btn btn-primary" >Poista</a>';?></td>
                     </tr>
                     <?php
                     $maara++;

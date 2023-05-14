@@ -73,7 +73,7 @@
             
           </div>
 
-          <button name="submit" class="w-100 btn btn-lg btn-primary" type="submit">Muokkaa</button>
+          <button name="submit" class="w-100 mt-3 btn btn-lg btn-primary" type="submit" >Muokkaa</button>
           
         </form>
         <?php }else{error_reporting(0); echo "Et ole työntekijä"; ?>

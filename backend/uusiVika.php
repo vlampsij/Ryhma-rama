@@ -5,6 +5,8 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <title>Vikailmoitus</title>
     </head>
+c
+
     <body>
      <div class="container">
         <h1>Vikailmoitus</h1>
@@ -12,10 +14,10 @@
         <?php error_reporting(0);
         if(isset($_SESSION['tunnus']) OR $_SESSION['rooli'] == "asukas" OR $_SESSION['rooli'] == "isännöitsijä"){ ?>
         <a href="http://localhost/vlampsij.github.io/backend/logout.php">Kirjaudu ulos</a>
-        <h3>Lisää vika</h3>
-        <table class="table-bordered">
+        <h3 class="mt-3">Lisää vika</h3>
+        <table class="table-bordered mt-3 table">
             <form action="lisaaVika.php" method="POST">
-                <tr>
+                <tr class="p-4">
                     <td>Vian kuvaus</td>
                     <td><input type="text" name="vika" required></td>
                 </tr>
@@ -29,7 +31,7 @@
                 </tr>
                 <tr>
                     <td></td>
-                    <td><button name="talleta" type="submit" class="btn btn-primary">Talleta</button></td>
+                    <td><button name="talleta" type="submit" class="btn btn-primary" style="width:30%;font-size:25px;">Talleta</button></td>
                 </tr>
             </form>
         </table>

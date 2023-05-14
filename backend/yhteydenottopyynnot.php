@@ -22,6 +22,16 @@
     <link rel="stylesheet" href="../css/mycss.css">
     <title>Kiinteistöhuolto R. Autio Oy</title>
     <link href="../css/sign-in.css" rel="stylesheet">
+    <style>
+      table{
+        margin-top: 1.5em;
+        
+      }    
+      
+       
+
+    
+      </style>
   </head>
   <body class="text-center">
 
@@ -51,6 +61,7 @@
     <main class="form-signin w-100 m-auto  mb-3">
         <div>
 <?php if($_SESSION['rooli'] == "isannoitsija" OR $_SESSION['rooli'] == "tyontekija"){ ?>
+      <br>
       <table class="table table-striped">
       <tr>
          <th>Yhteydenottopyyntö ID</th>
@@ -85,9 +96,37 @@
             }
             echo "Yhteydenottopyyntöjen määrä: " . $maara;
         }?>
+        
 </div>
+
+
 </main>
 
+<div class="container">
+        
+        <table class="table-bordered mt-3 table ">
+            <h3 class="mt-5">Lisää vika</h3>
+            <form action="lisaaVika.php" method="POST">
+                <tr class="p-4">
+                    <td>Vian kuvaus</td>
+                    <td><input type="text" name="vika" required></td>
+                </tr>
+                <tr>
+                    <td>Osoite</td>
+                    <td><input type="text" name="osoite" required></td>
+                </tr>
+                <tr>
+                    <td>Ilmoituksen tekijä</td>
+                    <td><input type="text" name="tekija" required></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button name="talleta" type="submit" class="btn btn-primary" style="width:100%;">Talleta</button></td>
+                </tr>
+            </form>
+        </table>
+        
+     </div>
     
 <!-- <div class="footer mt-5">
     <p>Kiinteistöhuolto R. Autio Oy</p>
@@ -96,3 +135,4 @@
 </div> -->
 </body>
 </html>
+
