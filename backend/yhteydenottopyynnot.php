@@ -56,6 +56,7 @@
          <th>Yhteydenottopyyntö ID</th>
          <th>Nimi</th>
          <th>Sähköposti</th>
+         <th>Osoite</th>
          <th>Viesti</th>
       </tr>
 
@@ -73,6 +74,7 @@
                         <td><?php echo $pyynto['Pyyntoid']; ?></td>
                         <td><?php echo $pyynto['Nimi']; ?></td>
                         <td><?php echo $pyynto['Sposti']; ?></td>
+                        <td><?php echo $pyynto['Osoite']; ?></td>
                         <td><?php echo $pyynto['Viesti']; ?></td>
                         <td><?php echo'<a href="poistaPyynto.php?pyyntoid='.$pyynto['Pyyntoid'].'" class="btn btn-primary">Poista</a>';?></td>
                     </tr>
