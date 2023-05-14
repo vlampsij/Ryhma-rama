@@ -1,9 +1,9 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 14.05.2023 klo 03:40
+-- Generation Time: 14.05.2023 klo 22:08
 -- Palvelimen versio: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -106,7 +106,6 @@ INSERT INTO `tunnukset` (`tunnusid`, `tunnus`, `salasana`, `rooliid`, `nimi`) VA
 (8, 'asiakas', '$2y$10$SB3dSs7n4RQIvN..7im6meItNbIVcHT4YWaJNjr3wO1be7dg.L3cK', 2, 'Pihla D'),
 (9, 'asukas', '$2y$10$K3CGNU7.avYQtyQrVU5BxuCT933tdBKMRrlDM9jpR/o8MIU7z9HCO', 1, 'Pekka');
 
-
 -- --------------------------------------------------------
 
 --
@@ -149,7 +148,9 @@ CREATE TABLE `vikailmoitukset` (
 --
 
 INSERT INTO `vikailmoitukset` (`vikaid`, `vika`, `osoite`, `tilanne`, `tekija`, `tyontekijaid`, `Kirjausaika`) VALUES
-(2, 'Hana vuotaa', 'puistolammentie', 3, '5', 3, '2023-05-14 04:38:13');
+(2, 'Hana vuotaa', 'puistolammentie', 3, '5', 3, '2023-05-14 04:38:13'),
+(11, 'avain hukassa', 'Saarenpäänkatu 30 A 4', 1, 'Veera', 1, '2023-05-14 23:04:53'),
+(12, 'oven lukko ei toimi', 'Kauppakatu 40 A 14', 1, 'Pentti', 1, '2023-05-14 23:07:05');
 
 -- --------------------------------------------------------
 
@@ -169,8 +170,10 @@ CREATE TABLE `yhteydenottopyynnot` (
 -- Vedos taulusta `yhteydenottopyynnot`
 --
 
-INSERT INTO `yhteydenottopyynnot` (`pyyntoid`, `nimi`, `sposti`, `viesti`) VALUES
-(1, 'A', 'B', 'C');
+INSERT INTO `yhteydenottopyynnot` (`pyyntoid`, `nimi`, `sposti`, `osoite`, `viesti`) VALUES
+(1, 'A', 'B', '', 'C'),
+(4, 'Pentti', 'ppentti@sähköposti.fi', 'Kauppakatu 40 A 14', 'oven lukko ei toimi'),
+(5, 'Veera', 'vlampsij@sposti.com', 'Saarenpäänkatu 30 A 4', 'avain hukassa');
 
 --
 -- Indexes for dumped tables
@@ -249,7 +252,7 @@ ALTER TABLE `tila`
 -- AUTO_INCREMENT for table `tunnukset`
 --
 ALTER TABLE `tunnukset`
-  MODIFY `tunnusid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `tunnusid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `tyontekijat`
@@ -261,13 +264,13 @@ ALTER TABLE `tyontekijat`
 -- AUTO_INCREMENT for table `vikailmoitukset`
 --
 ALTER TABLE `vikailmoitukset`
-  MODIFY `vikaid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `vikaid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `yhteydenottopyynnot`
 --
 ALTER TABLE `yhteydenottopyynnot`
-  MODIFY `pyyntoid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `pyyntoid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Rajoitteet vedostauluille
