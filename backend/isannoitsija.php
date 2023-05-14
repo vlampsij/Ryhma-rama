@@ -9,6 +9,7 @@
      <div class="container">
         <h1></h1>
         <a href="../index.html">Takaisin</a>
+        <br>
         <?php
         if($_SESSION['rooli'] == "isannoitsija"){ ?>
         <a href="http://localhost/vlampsij.github.io/backend/logout.php">Kirjaudu ulos</a><br>
@@ -19,6 +20,10 @@
         <br>
         <div>
             <a href="http://localhost/vlampsij.github.io/backend/register.php">Lisää tunnus</a>
+        </div>
+        <br>
+        <div>
+            <a href="http://localhost/vlampsij.github.io/backend/tyontekijat.php">Työntekijälista</a>
         </div>
         
         <?php }else{ ?>
