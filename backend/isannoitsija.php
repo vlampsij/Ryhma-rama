@@ -25,7 +25,10 @@
         <div>
             <a href="http://localhost/vlampsij.github.io/backend/tyontekijat.php">Työntekijälista</a>
         </div>
-        
+        <br>
+        <div>
+            <a href="http://localhost/vlampsij.github.io/backend/yhteydenottopyynnot.php">Katso yhteydenottopyynnöt</a>
+        </div>
         <?php }else{ ?>
             <p>Tunnuksella ei oikeuksia nähdä sivua</p>
         <?php } ?>

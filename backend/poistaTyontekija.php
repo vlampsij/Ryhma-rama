@@ -10,5 +10,5 @@ if(isset($_GET['tyontekijaid'])){
     $poista->execute();
 }
 
-header("location:index.php");
+header("location:http://localhost/vlampsij.github.io/backend/tyontekijat.php");
 ?>
