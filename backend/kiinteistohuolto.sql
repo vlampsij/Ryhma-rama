@@ -161,6 +161,7 @@ CREATE TABLE `yhteydenottopyynnot` (
   `pyyntoid` int(11) NOT NULL,
   `nimi` varchar(30) NOT NULL,
   `sposti` varchar(30) NOT NULL,
+  `osoite` text NOT NULL,
   `viesti` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
