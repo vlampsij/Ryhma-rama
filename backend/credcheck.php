@@ -14,6 +14,7 @@ if(isset($_POST['submit'])){
         $login = $conn->query($komento);
         $login->execute();
         $data = $login->fetch(PDO::FETCH_ASSOC);
+        $tunnusid = $data['tunnusid'];
 
 
 
@@ -41,6 +42,13 @@ if(isset($_POST['submit'])){
                     $_SESSION['rooli'] = "isännöitsijä";
                     header("location: http://localhost/vlampsij.github.io/backend/isannoitsija.php");
                 }elseif($data['rooliid'] == 4){
+                    $komento2 = "SELECT * FROM tyontekijat WHERE tunnusid = :tunnusid";
+                    $login2 = $conn->prepare($komento2);
+                    $login2->bindValue(':tunnusid', $tunnusid, PDO::PARAM_STR);
+                    $login2->execute();
+                    $ttdata = $login2->fetch(PDO::FETCH_ASSOC);
+
+                    $_SESSION['tyontekijaid'] = $ttdata['tyontekijaid'];
                     $_SESSION['tunnus'] = $data['tunnus'];
                     $_SESSION['tunnusid'] = $data['tunnusid'];
                     $_SESSION['rooli'] = "tyontekija";
