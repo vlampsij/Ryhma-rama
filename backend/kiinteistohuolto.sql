@@ -101,8 +101,10 @@ CREATE TABLE `tunnukset` (
 
 INSERT INTO `tunnukset` (`tunnusid`, `tunnus`, `salasana`, `rooliid`, `nimi`) VALUES
 (1, '0', '0', 4, 'tyhjä'),
-(4, 'admin', '$2y$10$nxl7lrrQ8ifFym8ebwIONuJja.IXLzGmwQNLUNrdDtWkiedI5V5yC', 3, ''),
-(5, 'apuumaki', '$2y$10$u/hur5QCSP.ZdcGth22WnezupfcpXXIwdGkc8OVB95wdKkYGO79Vq', 4, 'A. Puumäki');
+(4, 'admin', '$2y$10$nxl7lrrQ8ifFym8ebwIONuJja.IXLzGmwQNLUNrdDtWkiedI5V5yC', 3, 'R Autio'),
+(5, 'apuumaki', '$2y$10$u/hur5QCSP.ZdcGth22WnezupfcpXXIwdGkc8OVB95wdKkYGO79Vq', 4, 'A. Puumäki'),
+(6, 'asiakas', 'a', 2, 'Pauli S'),
+(7, 'asukas', 'a', 1, 'Pihla D');
 
 -- --------------------------------------------------------
 
