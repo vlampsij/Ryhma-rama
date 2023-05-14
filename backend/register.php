@@ -40,13 +40,7 @@
         <li class="nav-item"><a href="../referenssit.html">Referenssit</a></li>
         <li class="nav-item"><a href="../ota_yhteytta.html">Ota yhteyttä</a></li>
         <li class="dropdown nav-item">
-          <a href="#">Kirjaudu</a>
-          <div class="dropdown-content">
-            <a class="linkki" href="http://localhost/vlampsij.github.io/backend/login.php">Asukas</a>
-            <a class="linkki" href="http://localhost/vlampsij.github.io/backend/login.php">Isännöitsijä</a>
-            <a class="linkki" href="http://localhost/vlampsij.github.io/backend/login.php">Asiakas</a>
-            <a class="linkki" href="http://localhost/vlampsij.github.io/backend/login.php">Työntekijä</a>
-          </div>
+          <a href="http://localhost/vlampsij.github.io/backend/login.php">Kirjaudu</a>
         </li>
       </ul>
       
