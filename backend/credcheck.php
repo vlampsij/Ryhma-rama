@@ -24,23 +24,23 @@ if(isset($_POST['submit'])){
                 echo "ok";
                 if($data['tunnusid'] == 1){
                     echo "tunnuksilla ei oikeuksia mihinkään";
-                    header("location: http://localhost/vlampsij.github.io/backend/login.php");
+                    header("location:http://localhost/vlampsij.github.io/backend/login.php");
                 }
                 if($data['rooliid'] == 1){
                     $_SESSION['tunnus'] = $data['tunnus'];
                     $_SESSION['tunnusid'] = $data['tunnusid'];
                     $_SESSION['rooli'] = "asukas";
-                    header("location: http://localhost/vlampsij.github.io/backend/uusiVika.php");
+                    header("location:http://localhost/vlampsij.github.io/backend/uusiVika.php");
                 }elseif($data['rooliid'] == 2){
                     $_SESSION['tunnus'] = $data['tunnus'];
                     $_SESSION['tunnusid'] = $data['tunnusid'];
                     $_SESSION['rooli'] = "asiakas";
-                    header("location: http://localhost/vlampsij.github.io/backend/yhteydenotto.php");
+                    header("location:http://localhost/vlampsij.github.io/backend/yhteydenotto.php");
                 }elseif($data['rooliid'] == 3){
                     $_SESSION['tunnus'] = $data['tunnus'];
                     $_SESSION['tunnusid'] = $data['tunnusid'];
                     $_SESSION['rooli'] = "isannoitsija";
-                    header("location: http://localhost/vlampsij.github.io/backend/isannoitsija.php");
+                    header("location:http://localhost/vlampsij.github.io/backend/isannoitsija.php");
                 }elseif($data['rooliid'] == 4){
                     $komento2 = "SELECT * FROM tyontekijat WHERE tunnusid = :tunnusid";
                     $login2 = $conn->prepare($komento2);
@@ -52,10 +52,10 @@ if(isset($_POST['submit'])){
                     $_SESSION['tunnus'] = $data['tunnus'];
                     $_SESSION['tunnusid'] = $data['tunnusid'];
                     $_SESSION['rooli'] = "tyontekija";
-                    header("location: http://localhost/vlampsij.github.io/backend/tyontekija.php");
+                    header("location:http://localhost/vlampsij.github.io/backend/tyontekija.php");
                 }else{
                     echo "tunnuksilla ei oikeuksia mihinkään";
-                    header("location: http://localhost/vlampsij.github.io/backend/login.php");
+                    header("location:http://localhost/vlampsij.github.io/backend/login.php");
                 }
             }else{
                 echo "virheellinen tunnus tai salasana";
