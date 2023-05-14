@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 14.05.2023 klo 03:27
+-- Generation Time: 14.05.2023 klo 03:40
 -- Palvelimen versio: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -137,15 +137,16 @@ CREATE TABLE `vikailmoitukset` (
   `osoite` varchar(30) NOT NULL,
   `tilanne` int(11) NOT NULL DEFAULT 1,
   `tekija` varchar(30) NOT NULL,
-  `tyontekijaid` int(11) NOT NULL
+  `tyontekijaid` int(11) NOT NULL,
+  `Kirjausaika` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Vedos taulusta `vikailmoitukset`
 --
 
-INSERT INTO `vikailmoitukset` (`vikaid`, `vika`, `osoite`, `tilanne`, `tekija`, `tyontekijaid`) VALUES
-(2, 'Hana vuotaa', 'puistolammentie', 3, '5', 3);
+INSERT INTO `vikailmoitukset` (`vikaid`, `vika`, `osoite`, `tilanne`, `tekija`, `tyontekijaid`, `Kirjausaika`) VALUES
+(2, 'Hana vuotaa', 'puistolammentie', 3, '5', 3, '2023-05-14 04:38:13');
 
 -- --------------------------------------------------------
 

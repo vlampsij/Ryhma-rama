@@ -57,6 +57,7 @@
          <th>Osoite</th>
          <th>Status</th>
          <th>Tyontekija</th>
+         <th>Kirjausaika</th>
       </tr>
 
             <?php
@@ -76,6 +77,7 @@
                           <td><?php echo $vika['Osoite']; ?></td>
                           <td><?php echo $vika['Tilanne']; ?></td>
                           <td><?php echo $vika['Tyontekija']; ?></td>
+                          <td><?php echo $vika['Kirjausaika']; ?></td>
                         </tr>
                         <?php
                         $maara++;
