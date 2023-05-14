@@ -103,8 +103,9 @@ INSERT INTO `tunnukset` (`tunnusid`, `tunnus`, `salasana`, `rooliid`, `nimi`) VA
 (1, '0', '0', 4, 'tyhjä'),
 (4, 'admin', '$2y$10$nxl7lrrQ8ifFym8ebwIONuJja.IXLzGmwQNLUNrdDtWkiedI5V5yC', 3, 'R Autio'),
 (5, 'apuumaki', '$2y$10$u/hur5QCSP.ZdcGth22WnezupfcpXXIwdGkc8OVB95wdKkYGO79Vq', 4, 'A. Puumäki'),
-(6, 'asiakas', 'a', 2, 'Pauli S'),
-(7, 'asukas', 'a', 1, 'Pihla D');
+(8, 'asiakas', '$2y$10$SB3dSs7n4RQIvN..7im6meItNbIVcHT4YWaJNjr3wO1be7dg.L3cK', 2, 'Pihla D'),
+(9, 'asukas', '$2y$10$K3CGNU7.avYQtyQrVU5BxuCT933tdBKMRrlDM9jpR/o8MIU7z9HCO', 1, 'Pekka');
+
 
 -- --------------------------------------------------------
 
