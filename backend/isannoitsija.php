@@ -10,7 +10,7 @@
         <h1></h1>
         <a href="../index.html">Takaisin</a>
         <?php
-        if($_SESSION['rooli'] == "isännöitsijä"){ ?>
+        if($_SESSION['rooli'] == "isannoitsija"){ ?>
         <a href="http://localhost/vlampsij.github.io/backend/logout.php">Kirjaudu ulos</a><br>
         <h3>Valitse isännöitsijän toiminto</h3>
         <div>

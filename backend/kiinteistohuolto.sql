@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 12.05.2023 klo 00:33
+-- Generation Time: 14.05.2023 klo 03:27
 -- Palvelimen versio: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -101,8 +101,8 @@ CREATE TABLE `tunnukset` (
 
 INSERT INTO `tunnukset` (`tunnusid`, `tunnus`, `salasana`, `rooliid`, `nimi`) VALUES
 (1, '0', '0', 4, 'tyhjä'),
-(2, 'rautio', 'a', 4, 'R. Autio'),
-(3, 'pentti', 'a', 1, 'Pentti');
+(4, 'admin', '$2y$10$nxl7lrrQ8ifFym8ebwIONuJja.IXLzGmwQNLUNrdDtWkiedI5V5yC', 3, ''),
+(5, 'apuumaki', '$2y$10$u/hur5QCSP.ZdcGth22WnezupfcpXXIwdGkc8OVB95wdKkYGO79Vq', 4, 'A. Puumäki');
 
 -- --------------------------------------------------------
 
@@ -123,7 +123,7 @@ CREATE TABLE `tyontekijat` (
 
 INSERT INTO `tyontekijat` (`tyontekijaid`, `nimi`, `tunnusid`, `tilaid`) VALUES
 (1, 'tyhjä', 1, 1),
-(2, 'R. Autio', 2, 1);
+(3, 'A. Puumäki', 5, 1);
 
 -- --------------------------------------------------------
 
@@ -135,17 +135,17 @@ CREATE TABLE `vikailmoitukset` (
   `vikaid` int(11) NOT NULL,
   `vika` text NOT NULL,
   `osoite` varchar(30) NOT NULL,
-  `status` int(11) NOT NULL DEFAULT 1,
-  `tekija` int(11) NOT NULL,
-  `tyontekijaid` int(11) NOT NULL DEFAULT 1
+  `tilanne` int(11) NOT NULL DEFAULT 1,
+  `tekija` varchar(30) NOT NULL,
+  `tyontekijaid` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Vedos taulusta `vikailmoitukset`
 --
 
-INSERT INTO `vikailmoitukset` (`vikaid`, `vika`, `osoite`, `status`, `tekija`, `tyontekijaid`) VALUES
-(1, 'Hana vuotaa', '', 1, 3, 1);
+INSERT INTO `vikailmoitukset` (`vikaid`, `vika`, `osoite`, `tilanne`, `tekija`, `tyontekijaid`) VALUES
+(2, 'Hana vuotaa', 'puistolammentie', 3, '5', 3);
 
 -- --------------------------------------------------------
 
@@ -209,9 +209,8 @@ ALTER TABLE `tyontekijat`
 --
 ALTER TABLE `vikailmoitukset`
   ADD PRIMARY KEY (`vikaid`),
-  ADD KEY `status` (`status`),
   ADD KEY `tyontekijaid` (`tyontekijaid`),
-  ADD KEY `tekija` (`tekija`);
+  ADD KEY `tilanne` (`tilanne`);
 
 --
 -- Indexes for table `yhteydenottopyynnot`
@@ -245,19 +244,19 @@ ALTER TABLE `tila`
 -- AUTO_INCREMENT for table `tunnukset`
 --
 ALTER TABLE `tunnukset`
-  MODIFY `tunnusid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `tunnusid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `tyontekijat`
 --
 ALTER TABLE `tyontekijat`
-  MODIFY `tyontekijaid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `tyontekijaid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `vikailmoitukset`
 --
 ALTER TABLE `vikailmoitukset`
-  MODIFY `vikaid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `vikaid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `yhteydenottopyynnot`
@@ -279,16 +278,14 @@ ALTER TABLE `tunnukset`
 -- Rajoitteet taululle `tyontekijat`
 --
 ALTER TABLE `tyontekijat`
-  ADD CONSTRAINT `tyontekijat_ibfk_1` FOREIGN KEY (`tunnusid`) REFERENCES `tunnukset` (`tunnusid`),
   ADD CONSTRAINT `tyontekijat_ibfk_2` FOREIGN KEY (`tilaid`) REFERENCES `tila` (`tilaid`);
 
 --
 -- Rajoitteet taululle `vikailmoitukset`
 --
 ALTER TABLE `vikailmoitukset`
-  ADD CONSTRAINT `vikailmoitukset_ibfk_1` FOREIGN KEY (`status`) REFERENCES `status` (`statusid`),
-  ADD CONSTRAINT `vikailmoitukset_ibfk_2` FOREIGN KEY (`tyontekijaid`) REFERENCES `tyontekijat` (`tyontekijaid`),
-  ADD CONSTRAINT `vikailmoitukset_ibfk_3` FOREIGN KEY (`tekija`) REFERENCES `tunnukset` (`tunnusid`);
+  ADD CONSTRAINT `vikailmoitukset_ibfk_1` FOREIGN KEY (`tilanne`) REFERENCES `status` (`statusid`),
+  ADD CONSTRAINT `vikailmoitukset_ibfk_2` FOREIGN KEY (`tyontekijaid`) REFERENCES `tyontekijat` (`tyontekijaid`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

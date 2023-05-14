@@ -39,7 +39,7 @@ if(isset($_POST['submit'])){
                 }elseif($data['rooliid'] == 3){
                     $_SESSION['tunnus'] = $data['tunnus'];
                     $_SESSION['tunnusid'] = $data['tunnusid'];
-                    $_SESSION['rooli'] = "isännöitsijä";
+                    $_SESSION['rooli'] = "isannoitsija";
                     header("location: http://localhost/vlampsij.github.io/backend/isannoitsija.php");
                 }elseif($data['rooliid'] == 4){
                     $komento2 = "SELECT * FROM tyontekijat WHERE tunnusid = :tunnusid";

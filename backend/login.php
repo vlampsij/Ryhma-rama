@@ -71,7 +71,20 @@
         </form>
         <?php }else{echo "olet jo kirjautunut"; ?>
           <br><a href="http://localhost/vlampsij.github.io/backend/logout.php">Kirjaudu ulos</a>
-        <?php } ?>
+        <?php }
+        error_reporting(0);
+        if($_SESSION['rooli'] == "isannoitsija"){
+          ?>
+          <br><a href="http://localhost/vlampsij.github.io/backend/isannoitsija.php">Isännöitsijän sivu</a>
+          <?php }else if($_SESSION['rooli'] == "tyontekija"){
+          ?>
+          <br><a href="http://localhost/vlampsij.github.io/backend/tyontekija.php">Työntekijän sivu</a>
+        <?php }else if($_SESSION['rooli'] == "asukas"){
+          ?>
+          <br><a href="http://localhost/vlampsij.github.io/backend/uusiVika.php">Tee vikailmoitus</a>
+          <?php
+        }
+        ?>
       </main>
 
     

@@ -49,7 +49,7 @@
 
     
     <main class="form-signin w-100 m-auto  mb-3">
-    <?php if(!$_SESSION['rooli'] == "isännöitsijä"){ ?>
+    <?php if($_SESSION['rooli'] != "isannoitsija"){ ?>
     <form method="POST" action="http://localhost/vlampsij.github.io/backend/lisaaTunnus.php">
 
           <h1 class="h3 mb-3 fw-normal">Luo tunnus</h1>
