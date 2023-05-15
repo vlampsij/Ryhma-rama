@@ -49,10 +49,11 @@
 
     
     <main class="form-signin w-100 m-auto  mb-3">
+    <a href="http://localhost/vlampsij.github.io/backend/tyontekija.php">Takaisin</a>
     <?php if($_SESSION['rooli'] == "tyontekija"){ ?>
     <form method="POST" action="lisaaTyontekija.php">
 
-          <h1 class="h3 mb-3 fw-normal">Tyontekijän tiedot</h1>
+          <h1 class="h3 mb-3 fw-normal">Muokkaa omia tietoja</h1>
       
           <div class="form-floating ">
             <label for="tunnusid">Tunnus ID</label>
@@ -64,8 +65,9 @@
             <input type="text" class="form-control" name="nimi" placeholder="Nimi" required>
             
           </div>
+          <br>
           <div class="form-floating ">
-            <label for="tilaid">rooli</label>
+            <label for="tilaid">Tila</label>
             <select class="form-control" name="tilaid" required>
                 <option value="1">Vapaa</option>
                 <option value="2">Varattu</option>

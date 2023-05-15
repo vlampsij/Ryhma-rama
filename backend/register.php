@@ -46,10 +46,11 @@
       
     </div>
     </nav>
-
+    <a href="http://localhost/vlampsij.github.io/backend/isannoitsija.php">Takaisin</a>
     
     <main class="form-signin w-100 m-auto  mb-3">
-    <?php if($_SESSION['rooli'] != "isannoitsija"){ ?>
+    <?php if($_SESSION['rooli'] == "isannoitsija"){ ?>
+
     <form method="POST" action="http://localhost/vlampsij.github.io/backend/lisaaTunnus.php">
 
           <h1 class="h3 mb-3 fw-normal">Luo tunnus</h1>
@@ -87,6 +88,7 @@
           
         </form>
         <?php }else{echo "Et ole isännöitsijä"; ?>
+
           <br><a href="http://localhost/vlampsij.github.io/backend/logout.php">Kirjaudu ulos</a>
         <?php } ?>
       </main>

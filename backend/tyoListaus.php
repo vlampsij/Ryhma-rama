@@ -13,7 +13,7 @@ $riveja = $data->rowCount();
 while($rivi = $data->fetch(PDO::FETCH_ASSOC)){
     //echo $rivi['etunimi'] . " " . $rivi['sukunimi'] . " " . $rivi['sposti'] . " " . $rivi['puh'] . "<br>";
     $laskuri++;
-    $JSON.= '{"Vika":"'.$rivi['vika'].'","Vikaid":"'.$rivi['vikaid'].'","Osoite":"'.$rivi['osoite'].'","Tilanne":"'.$rivi['tilanne'].'","Tyontekija":"'.$rivi['nimi'].'","Tyontekijaid":"'.$rivi['tyontekijaid'].'","kirjausaika":"'.$rivi['kirjausaika'].'"}';
+    $JSON.= '{"Vika":"'.$rivi['vika'].'","Vikaid":"'.$rivi['vikaid'].'","Osoite":"'.$rivi['osoite'].'","Tilanne":"'.$rivi['tilanne'].'","Tyontekija":"'.$rivi['nimi'].'","Tyontekijaid":"'.$rivi['tyontekijaid'].'","Kirjausaika":"'.$rivi['kirjausaika'].'"}';
     if($laskuri<$riveja) $JSON.=",";
 }
 

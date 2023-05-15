@@ -1,8 +1,6 @@
-<?php session_start(); ?>
-<!DOCTYPE html>
-<html>
-<head>
-    
+<!doctype html>
+<html lang="en">
+  <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -18,36 +16,32 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <!--<script src="js/myScript.js"></script>-->
-    <link rel="stylesheet" href="../css/mycss.css">
+    <link rel="stylesheet" href="css/mycss.css">
+    <title>Kiinteistöhuolto R. Autio Oy</title>
     <!-- Fontin linkki -->
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
- 
-        <title>Työntekijän sivu</title>
-    </head>
-    <body>
-    <?php include '../header.html'; ?>
-     <div class="container text-center ">
-        <h1></h1>
-        <a href="../index.html">Takaisin</a>
-        <?php
-        if($_SESSION['rooli'] == "tyontekija"){ ?>
-        <a href="http://localhost/vlampsij.github.io/backend/logout.php">Kirjaudu ulos</a><br>
-        <h3 class="mt-4">Valitse työntekijän toiminto</h3>
-        <div>
-            <a href="http://localhost/vlampsij.github.io/backend/uusiTyontekija.php">Muokkaa työntekijän tietoja</a>
-        </div>
-        <br>
-        <div>
-            <a href="http://localhost/vlampsij.github.io/backend/tyolista.php">Työlista ja tilanhallinta</a>
-        </div>
-        <br>
-        <div>
-            <a href="http://localhost/vlampsij.github.io/backend/yhteydenottopyynnot.php">Katso yhteydenottopyynnöt</a>
-        </div>
-        <?php }else{ ?>
-            <p>Tunnuksella ei oikeuksia nähdä sivua</p>
-        <?php } ?>
-     </div>
-     <?php include '../footer.html'; ?>
-    </body>
+  </head>
+  <body>
+
+    <div class="kuva logo">
+        <a href="index.html"><img src="../img/logo.png" alt="Kiinteistöhuolto R. Autio Oy" id="logo" class="img-fluid"></a>
+    </div>
+    <nav class=" sticky-top navbar-expand-sm">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mynavbar"></div>
+      <ul>
+        <li class="nav-item"><a href="index.html">Etusivu</a></li>
+        <li class="nav-item"><a href="yhteystiedot.html">Yhteystiedot</a></li>
+        <li class="nav-item"><a href="referenssit.html">Referenssit</a></li>
+        <li class="nav-item"><a href="ota_yhteytta.html">Ota yhteyttä</a></li>
+        <li class="dropdown nav-item">
+          <a href="http://localhost/vlampsij.github.io/backend/login.php">Kirjaudu</a>
+        </li>
+      </ul>
+      
+    </div>
+    </nav>
+  </body>
 </html>

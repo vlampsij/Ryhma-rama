@@ -47,7 +47,7 @@
     </div>
     </nav>
 
-    
+    <a href="http://localhost/vlampsij.github.io/backend/tyontekija.php">Takaisin</a>
     <main class="form-signin w-100 m-auto  mb-3">
     <?php if($_SESSION['rooli'] == "tyontekija"){ ?>
       <table class="table table-striped">
@@ -98,8 +98,8 @@
             <input type="text" class="form-control mb-3" name="tyontekijaid" value="<?php echo $_SESSION['tyontekijaid']?>" readonly>
             
           </div>
-          <div class="form-floating ">
-            <label for="vikaid">vikaid</label>
+          <div class="form-floating mt-2">
+            <label for="vikaid">Vikaid</label>
             <select class="form-control" name="vikaid">
               <?php if($maara != 0){
                 foreach($viat as $key){
@@ -113,7 +113,7 @@
                 }
               } ?>
             </select>
-            <select class="form-control" name="tilanne">
+            <select class="form-control mt-2" name="tilanne">
               <?php if($maara != 0){
                 foreach($viat as $key){
                   foreach($key as $vika){
@@ -128,7 +128,7 @@
             </select>
             
           </div>
-          <div class="form-floating ">
+          <div class="form-floating mt-2">
             <?php if($maara == 0){ ?>
             <label for="tilaid">tila</label>
               <select class="form-control" name="tilaid" readonly>
@@ -141,7 +141,7 @@
             
           </div>
 
-          <button name="submit" class="w-100 btn btn-lg btn-primary" type="submit">Muokkaa</button>
+          <button name="submit" class="w-100 btn btn-lg btn-primary mt-2" type="submit">Muokkaa</button>
           
         </form>
         <?php }else{error_reporting(0); echo "Et ole työntekijä"; ?>

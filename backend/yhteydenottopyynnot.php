@@ -34,7 +34,7 @@
       </style>
   </head>
   <body class="text-center">
-
+  
     <div class="kuva logo">
         <a href="index.html"><img src="../img/logo.png" alt="Kiinteistöhuolto R. Autio Oy" id="logo" class="img-fluid"></a>
     </div>
@@ -57,7 +57,7 @@
     </div>
     </nav>
 
-    
+    <a href="http://localhost/vlampsij.github.io/backend/isannoitsija.php">Takaisin</a>
     <main class="form-signin w-100 m-auto  mb-3">
         <div>
 <?php if($_SESSION['rooli'] == "isannoitsija" OR $_SESSION['rooli'] == "tyontekija"){ ?>
@@ -121,7 +121,7 @@
                 </tr>
                 <tr>
                     <td></td>
-                    <td><button name="talleta" type="submit" class="btn btn-primary" style="width:100%;">Talleta</button></td>
+                    <td><button name="talleta1" type="submit" class="btn btn-primary" style="width:100%;">Talleta</button></td>
                 </tr>
             </form>
         </table>
