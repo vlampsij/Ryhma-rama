@@ -96,14 +96,16 @@
             }
             echo "Työntekijöiden määrä: " . $maara;
         }?>
+      </table>
 </div>
 </main>
-
-    
-<!-- <div class="footer mt-5">
+<div class="mt-2">
+<a href="http://localhost/vlampsij.github.io/backend/register.php">Lisää uusia työntekijöitä</a>
+      </div>
+<div class="footer mt-5">
     <p>Kiinteistöhuolto R. Autio Oy</p>
     <p>Y-tunnus: 09876543-1</p>
     <p>kiinteistöhuolto@r.autio</p>
-</div> -->
+</div>
 </body>
 </html>

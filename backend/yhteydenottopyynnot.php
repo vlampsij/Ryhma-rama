@@ -62,7 +62,7 @@
         <div>
 <?php if($_SESSION['rooli'] == "isannoitsija" OR $_SESSION['rooli'] == "tyontekija"){ ?>
       <br>
-      <table class="table table-striped">
+      <table class="table table-striped table-bordered">
       <tr>
          <th>Yhteydenottopyyntö ID</th>
          <th>Nimi</th>

@@ -48,9 +48,10 @@
     </nav>
 
     <a href="http://localhost/vlampsij.github.io/backend/tyontekija.php">Takaisin</a>
-    <main class="form-signin w-100 m-auto  mb-3">
+    
+    <main class="form-signin w-100 m-auto  mb-3" >
     <?php if($_SESSION['rooli'] == "tyontekija"){ ?>
-      <table class="table table-striped">
+      <table class="table table-striped ">
       <tr>
          <th>Vikaid</th>
          <th>Vika</th>
