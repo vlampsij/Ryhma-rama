@@ -70,18 +70,18 @@
           
         </form>
         <?php }else{echo "olet jo kirjautunut"; ?>
-          <br><a href="http://localhost/vlampsij.github.io/backend/logout.php">Kirjaudu ulos</a>
+          <br><div class="mt-2"><a class="btn bg-secondary" href="http://localhost/vlampsij.github.io/backend/logout.php">Kirjaudu ulos</a></div>
         <?php }
         error_reporting(0);
         if($_SESSION['rooli'] == "isannoitsija"){
           ?>
-          <br><a href="http://localhost/vlampsij.github.io/backend/isannoitsija.php">Isännöitsijän sivu</a>
+          <br><a class="btn bg-primary" href="http://localhost/vlampsij.github.io/backend/isannoitsija.php">Isännöitsijän sivu</a>
           <?php }else if($_SESSION['rooli'] == "tyontekija"){
           ?>
-          <br><a href="http://localhost/vlampsij.github.io/backend/tyontekija.php">Työntekijän sivu</a>
+          <br><a class="btn bg-primary" href="http://localhost/vlampsij.github.io/backend/tyontekija.php">Työntekijän sivu</a>
         <?php }else if($_SESSION['rooli'] == "asukas"){
           ?>
-          <br><a href="http://localhost/vlampsij.github.io/backend/uusiVika.php">Tee vikailmoitus</a>
+          <br><a class="btn bg-primary" href="http://localhost/vlampsij.github.io/backend/uusiVika.php">Tee vikailmoitus</a>
           <?php
         }
         ?>
