@@ -21,7 +21,7 @@
     <!--<script src="js/myScript.js"></script>-->
     <link rel="stylesheet" href="../css/mycss.css">
     <title>Kiinteistöhuolto R. Autio Oy</title>
-    <link href="../css/sign-in.css" rel="stylesheet">
+    
 
     <style>
       table{
@@ -32,7 +32,25 @@
             font-size: 17px;
            
         }
-        
+        table{
+        margin-top: 1.5em;
+    background-color: white;
+    border-radius: 20px;
+      }    
+      .koko{
+        width: 80%;
+        margin: auto;
+        background: #0bbf6537;
+        border-radius: 6px;
+padding: 20px 60px 30px 40px;
+
+margin-top: 2em;
+margin-bottom: 2em;
+      }
+       input{
+        width: 70%;
+        height: 40px;
+       }
 
     </style>
   </head>
@@ -59,8 +77,10 @@
       
     </div>
     </nav>
-
+    
     <a href="http://localhost/vlampsij.github.io/backend/isannoitsija.php">Takaisin</a>
+<div class="koko">
+    
     <main class="form-signin w-100 m-auto  mb-3">
         <div>
 <?php if($_SESSION['rooli'] == "isannoitsija"){ ?>
@@ -99,6 +119,7 @@
       </table>
 </div>
 </main>
+      </div>
 <div class="mt-2">
 <a href="http://localhost/vlampsij.github.io/backend/register.php">Lisää uusia työntekijöitä</a>
       </div>
@@ -107,5 +128,6 @@
     <p>Y-tunnus: 09876543-1</p>
     <p>kiinteistöhuolto@r.autio</p>
 </div>
+
 </body>
 </html>

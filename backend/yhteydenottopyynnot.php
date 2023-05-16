@@ -21,13 +21,28 @@
     <!--<script src="js/myScript.js"></script>-->
     <link rel="stylesheet" href="../css/mycss.css">
     <title>Kiinteistöhuolto R. Autio Oy</title>
-    <link href="../css/sign-in.css" rel="stylesheet">
+    
     <style>
+    
       table{
         margin-top: 1.5em;
-        
+    background-color: white;
+    border-radius: 20px;
       }    
-      
+      .koko{
+        width: 80%;
+        margin: auto;
+        background: #0bbf6537;
+        border-radius: 6px;
+padding: 20px 60px 30px 40px;
+
+margin-top: 2em;
+margin-bottom: 2em;
+      }
+       input{
+        width: 70%;
+        height: 40px;
+       }
        
 
     
@@ -35,7 +50,7 @@
   </head>
   <body class="text-center">
   
-    <div class="kuva logo">
+    <div class="kuva logo w-100">
         <a href="index.html"><img src="../img/logo.png" alt="Kiinteistöhuolto R. Autio Oy" id="logo" class="img-fluid"></a>
     </div>
 
@@ -56,13 +71,21 @@
       
     </div>
     </nav>
+<div class="koko">
+    
+<?php error_reporting(0);
+        if(isset($_SESSION['tunnus']) AND $_SESSION['rooli'] == "tyontekija"){ ?>
+         <?php echo '<a href="http://localhost/vlampsij.github.io/backend/tyontekija.php">Takaisin</a>' ?>
 
-    <a href="http://localhost/vlampsij.github.io/backend/isannoitsija.php">Takaisin</a>
-    <main class="form-signin w-100 m-auto  mb-3">
-        <div>
+         <?php }else{ ?>
+            <?php echo '<a href="http://localhost/vlampsij.github.io/backend/isannoitsija.php">Takaisin</a>'?>
+        <?php }; ?>
+
+    <main class="form-signin mb-3 table2">
+        <div >
 <?php if($_SESSION['rooli'] == "isannoitsija" OR $_SESSION['rooli'] == "tyontekija"){ ?>
       <br>
-      <table class="table table-striped table-bordered">
+      <table class="table table-striped table-bordered ">
       <tr>
          <th>Yhteydenottopyyntö ID</th>
          <th>Nimi</th>
@@ -102,7 +125,7 @@
 
 </main>
 
-<div class="container">
+<div class="container formi">
         
         <table class="table-bordered mt-3 table ">
             <h3 class="mt-5">Lisää vika</h3>
@@ -121,12 +144,13 @@
                 </tr>
                 <tr>
                     <td></td>
-                    <td><button name="talleta1" type="submit" class="btn btn-primary" style="width:100%;">Talleta</button></td>
+                    <td><button name="talleta1" type="submit" class="btn btn-primary" style="width:90%; font-size:20px;">Talleta</button></td>
                 </tr>
             </form>
         </table>
         
      </div>
+      </div>
     
 <!-- <div class="footer mt-5">
     <p>Kiinteistöhuolto R. Autio Oy</p>

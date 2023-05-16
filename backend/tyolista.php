@@ -21,7 +21,32 @@
     <!--<script src="js/myScript.js"></script>-->
     <link rel="stylesheet" href="../css/mycss.css">
     <title>Kiinteistöhuolto R. Autio Oy</title>
-    <link href="../css/sign-in.css" rel="stylesheet">
+    
+
+    <style>
+ table{
+        margin-top: 1.5em;
+    background-color: white;
+    border-radius: 20px;
+      }    
+      .koko{
+        width: 80%;
+        margin: auto;
+        background: #0bbf6537;
+        border-radius: 6px;
+padding: 20px 60px 30px 40px;
+
+margin-top: 2em;
+margin-bottom: 2em;
+      }
+       input{
+        width: 70%;
+        height: 40px;
+       }
+       
+
+      
+      </style>
   </head>
   <body class="text-center">
 
@@ -29,7 +54,7 @@
         <a href="index.html"><img src="../img/logo.png" alt="Kiinteistöhuolto R. Autio Oy" id="logo" class="img-fluid"></a>
     </div>
 
-    <nav class=" sticky-top navbar-expand-sm">
+    <nav class=" sticky-top navbar-expand-sm mb-2">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -48,7 +73,7 @@
     </nav>
 
     <a href="http://localhost/vlampsij.github.io/backend/tyontekija.php">Takaisin</a>
-    
+    <div class="koko">
     <main class="form-signin w-100 m-auto  mb-3" >
     <?php if($_SESSION['rooli'] == "tyontekija"){ ?>
       <table class="table table-striped ">
@@ -90,7 +115,7 @@
             ?>       
             
     </table>
-    <form method="POST" action="tilapaivitys.php">
+    <form method="POST" action="tilapaivitys.php" class="w-50 m-auto">
 
           <h1 class="h3 mb-3 fw-normal">Tyontekijän tiedot</h1>
       
@@ -129,7 +154,7 @@
             </select>
             
           </div>
-          <div class="form-floating mt-2">
+          <div class="form-floating mt-2 ">
             <?php if($maara == 0){ ?>
             <label for="tilaid">tila</label>
               <select class="form-control" name="tilaid" readonly>
@@ -150,7 +175,7 @@
         <?php } ?>
       </main>
 
-    
+        </div>
 <div class="footer mt-5">
     <p>Kiinteistöhuolto R. Autio Oy</p>
     <p>Y-tunnus: 09876543-1</p>

@@ -20,7 +20,14 @@
     <title>Uusi vika</title>
     <!-- Fontin linkki -->
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-  </head>
+    <style>
+input{
+        width: 70%;
+        height: 40px;
+       }
+       
+        </style>
+</head>
     
 
     <body>
@@ -29,8 +36,16 @@
      <div class="container text-center">
         <br>
         <h1 class="text-center">Vikailmoitus</h1>
-    
-        <a href="../index.html">Takaisin</a>
+       
+        <?php error_reporting(0);
+        if(isset($_SESSION['tunnus']) AND $_SESSION['rooli'] == "asukas"){ ?>
+         <?php echo '<a href="http://localhost/vlampsij.github.io/backend/index.php">Takaisin</a>' ?>
+
+         <?php }else{ ?>
+            <?php echo '<a href="http://localhost/vlampsij.github.io/backend/isannoitsija.php">Takaisin</a>'?>
+        <?php }; ?>
+
+
         <?php error_reporting(0);
         if(isset($_SESSION['tunnus']) OR $_SESSION['rooli'] == "asukas" OR $_SESSION['rooli'] == "isännöitsijä"){ ?>
         <a href="http://localhost/vlampsij.github.io/backend/logout.php" >Kirjaudu ulos</a>
@@ -51,7 +66,7 @@
                 </tr>
                 <tr>
                     <td></td>
-                    <td><button name="talleta" type="submit" class="btn btn-primary" style="width:30%;font-size:25px;">Talleta</button></td>
+                    <td><button name="talleta" type="submit" class="btn btn-primary" style="width:50%;font-size:25px;">Talleta</button></td>
                 </tr>
             </form>
         </table>

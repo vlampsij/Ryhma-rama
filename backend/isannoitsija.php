@@ -28,7 +28,7 @@
     <?php include '../header.html'; ?>
      <div class="container">
         <h1></h1>
-        <a href="../index.html">Takaisin</a>
+        <a href="../index.html" >Takaisin</a>
         <br>
         <?php
         if($_SESSION['rooli'] == "isannoitsija"){ ?>

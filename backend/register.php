@@ -66,8 +66,8 @@
             
           </div>
 
-          <div class="form-floating ">
-            <label for="salasana">rooli</label>
+          <div class="form-floating mb-3">
+            <label for="salasana">Rooli</label>
             <select class="form-control" name="rooliid" required>
                 <option value="1">asukas</option>
                 <option value="2">asiakas</option>
