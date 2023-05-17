@@ -2,8 +2,7 @@
 require "conn.php";
 
 if(isset($_POST['submit'])){
-    $tyontekijaid = $_POST['tyontekijaid'];
-    $tilaid = $_POST['tilaid'];
+
 
     // $komento2 = "SELECT * FROM vikailmoitukset WHERE vikaid = '$vikaid'";
     // $login = $conn->query($komento2);
@@ -11,47 +10,53 @@ if(isset($_POST['submit'])){
     // $data = $login->fetch(PDO::FETCH_ASSOC);
 
     if($_POST['tilaid'] == "1"){
+        $tyontekijaid = $_POST['tyontekijaid'];
+        $tilaid = $_POST['tilaid'];
         $komento3 = "UPDATE tyontekijat SET tilaid = :tilaid WHERE tyontekijaid = :tyontekijaid";
         $lisaa3 = $conn->prepare($komento3);
         $lisaa3->execute([
             ':tilaid' => $tilaid,
-            ':tyontekijaid' => $tyontekijaid
+            ':tyontekijaid' => $tyontekijaid,
         ]);
     }
-    else if($data['tyontekijaid'] == 1){
+    if($_POST['tyontekijaid'] == 1){
         $vikaid = $_POST['vikaid'];
         $tilanne = $_POST['tilanne'];
+        $tyontekijaid = $_POST['tyontekijaid'];
+        $tilaid = $_POST['tilaid'];
 
         $komento = "UPDATE vikailmoitukset SET tilanne = :tilanne, tyontekijaid = :tyontekijaid WHERE vikaid = :vikaid";
         $lisaa = $conn->prepare($komento);
         $lisaa->execute([
             ':tilanne' => $tilanne,
+            ':tyontekijaid' => $tyontekijaid,
             ':vikaid' => $vikaid,
-            ':tyontekijaid' => $tyontekijaid
         ]);
 
         $komento3 = "UPDATE tyontekijat SET tilaid = :tilaid WHERE tyontekijaid = :tyontekijaid";
         $lisaa3 = $conn->prepare($komento3);
         $lisaa3->execute([
             ':tilaid' => $tilaid,
-            ':tyontekijaid' => $tyontekijaid
+            ':tyontekijaid' => $tyontekijaid,
         ]);
     }else{
         $vikaid = $_POST['vikaid'];
         $tilanne = $_POST['tilanne'];
+        $tyontekijaid = $_POST['tyontekijaid'];
+        $tilaid = $_POST['tilaid'];
 
         $komento = "UPDATE vikailmoitukset SET tilanne = :tilanne WHERE vikaid = :vikaid";
         $lisaa = $conn->prepare($komento);
         $lisaa->execute([
             ':tilanne' => $tilanne,
-            ':vikaid' => $vikaid
+            ':vikaid' => $vikaid,
         ]);
 
         $komento3 = "UPDATE tyontekijat SET tilaid = :tilaid WHERE tyontekijaid = :tyontekijaid";
         $lisaa3 = $conn->prepare($komento3);
         $lisaa3->execute([
             ':tilaid' => $tilaid,
-            ':tyontekijaid' => $tyontekijaid
+            ':tyontekijaid' => $tyontekijaid,
         ]);
     }
 

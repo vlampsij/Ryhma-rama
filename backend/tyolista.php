@@ -95,7 +95,7 @@ margin-bottom: 2em;
               if(count($viat) != 0){
                 foreach($viat as $key){
                   foreach($key as $vika){
-                    if($vika['Tilanne'] != "3"){
+                    if($vika['Tilanneid'] != "3"){
                     ?>
                         <tr>
                          <td><?php echo $vika['Vikaid']; ?></td>
@@ -121,7 +121,7 @@ margin-bottom: 2em;
       
           <div class="form-floating ">
             <label for="tyontekijaid">Työntekijä ID</label>
-            <input type="text" class="form-control mb-3" name="tyontekijaid" value="<?php echo $_SESSION['tyontekijaid']?>" readonly>
+            <input type="text" class="form-control mb-3" name="tyontekijaid" value="<?php echo $_SESSION['tyontekijaid']; ?>" readonly>
             
           </div>
           <div class="form-floating mt-2">
@@ -130,7 +130,7 @@ margin-bottom: 2em;
               <?php if($maara != 0){
                 foreach($viat as $key){
                   foreach($key as $vika){
-                    if($vika['Tilanne'] != "3"){
+                    if($vika['Tilanneid'] != "3"){
                       ?>
                         <option value="<?php echo $vika['Vikaid']; ?>"><?php echo $vika['Vikaid']; ?></option>
                       <?php
