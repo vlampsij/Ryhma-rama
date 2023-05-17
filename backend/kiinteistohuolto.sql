@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 15, 2023 at 11:30 PM
+-- Generation Time: May 17, 2023 at 10:50 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -108,7 +108,9 @@ INSERT INTO `tunnukset` (`tunnusid`, `tunnus`, `salasana`, `rooliid`, `nimi`) VA
 (10, 'jarajarvi', '$2y$10$P5NvNn61xn6h/y.O9TMhS.TOTsWbIHF7x0UxigC5onguVDX2vSSoK', 4, 'J. Arajärvi'),
 (11, 'yylanne', '$2y$10$P7SUn72SCpDGIi2IldJ3nOSA32bufFRxzfd9N64VDylJ62Evbh9om', 4, 'Y. Ylänne'),
 (12, 'otalas', '$2y$10$keib4N9ABBfY7NIFTzE7gu5NwmlkEtAnPodlJogoXcp8zhlW6XYg6', 4, 'O. Talas'),
-(14, 'phattara', '$2y$10$8M9I9yPDNyBtUQDMuNOgjesXyWR//sDNV2s9LKQzq3bXDaiD72IGG', 4, 'P. Hattara');
+(14, 'phattara', '$2y$10$8M9I9yPDNyBtUQDMuNOgjesXyWR//sDNV2s9LKQzq3bXDaiD72IGG', 4, 'P. Hattara'),
+(15, 'minä', '$2y$10$c5iBPYXODUNrXx3Qt8PDcuQs9.9YzYeqvC8ls9cj/IsykERKb4iWW', 1, 'Minä'),
+(16, 'minä', '$2y$10$i.mLwOLj4N749XXt6YUncemDyZZuGXutyLivKdudGdIIny/PXp6fe', 1, 'minä');
 
 -- --------------------------------------------------------
 
@@ -129,10 +131,10 @@ CREATE TABLE `tyontekijat` (
 
 INSERT INTO `tyontekijat` (`tyontekijaid`, `nimi`, `tunnusid`, `tilaid`) VALUES
 (1, 'tyhjä', 1, 1),
-(3, 'A. Puumäki', 5, 1),
+(3, 'A. Puumäki', 5, 2),
 (7, 'J. Arajärvi', 10, 1),
 (8, 'O. Talas', 12, 1),
-(9, 'P. Hattara', 14, 1),
+(9, 'A. Hattara', 14, 2),
 (10, 'Y. Ylänne', 11, 1);
 
 -- --------------------------------------------------------
@@ -157,9 +159,10 @@ CREATE TABLE `vikailmoitukset` (
 
 INSERT INTO `vikailmoitukset` (`vikaid`, `vika`, `osoite`, `tilanne`, `tekija`, `tyontekijaid`, `kirjausaika`) VALUES
 (2, 'Hana vuotaa', 'puistolammentie', 3, '5', 3, '2023-05-14 04:38:13'),
-(11, 'avain hukassa', 'Saarenpäänkatu 30 A 4', 1, 'Veera', 1, '2023-05-14 23:04:53'),
-(12, 'oven lukko ei toimi', 'Kauppakatu 40 A 14', 1, 'Pentti', 1, '2023-05-14 23:07:05'),
-(13, 'hana vuotaa', 'kivirannantie 1', 3, 'minä', 1, '2023-05-15 20:04:15');
+(11, 'avain hukassa', 'Saarenpäänkatu 30 A 4', 2, 'Veera', 1, '2023-05-14 23:04:53'),
+(12, 'oven lukko ei toimi', 'Kauppakatu 40 A 14', 3, 'Pentti', 1, '2023-05-14 23:07:05'),
+(13, 'hana vuotaa', 'kivirannantie 1', 3, 'minä', 1, '2023-05-15 20:04:15'),
+(14, 'hana vuotaa', 'Isopalontie 3 a', 1, 'minä', 1, '2023-05-17 23:15:55');
 
 -- --------------------------------------------------------
 
@@ -180,9 +183,9 @@ CREATE TABLE `yhteydenottopyynnot` (
 --
 
 INSERT INTO `yhteydenottopyynnot` (`pyyntoid`, `nimi`, `sposti`, `osoite`, `viesti`) VALUES
-(1, 'A', 'B', '', 'C'),
 (4, 'Pentti', 'ppentti@sähköposti.fi', 'Kauppakatu 40 A 14', 'oven lukko ei toimi'),
-(5, 'Veera', 'vlampsij@sposti.com', 'Saarenpäänkatu 30 A 4', 'avain hukassa');
+(5, 'Veera', 'vlampsij@sposti.com', 'Saarenpäänkatu 30 A 4', 'avain hukassa'),
+(7, 'minä', 'minä@sposti.fi', 'Isopalontie 3 a', 'haluan asukastilin');
 
 --
 -- Indexes for dumped tables
@@ -262,7 +265,7 @@ ALTER TABLE `tila`
 -- AUTO_INCREMENT for table `tunnukset`
 --
 ALTER TABLE `tunnukset`
-  MODIFY `tunnusid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `tunnusid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `tyontekijat`
@@ -274,13 +277,13 @@ ALTER TABLE `tyontekijat`
 -- AUTO_INCREMENT for table `vikailmoitukset`
 --
 ALTER TABLE `vikailmoitukset`
-  MODIFY `vikaid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `vikaid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `yhteydenottopyynnot`
 --
 ALTER TABLE `yhteydenottopyynnot`
-  MODIFY `pyyntoid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `pyyntoid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- Constraints for dumped tables
