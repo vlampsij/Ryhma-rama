@@ -141,16 +141,16 @@ margin-bottom: 2em;
             </select>
             <select class="form-control mt-2" name="tilanne">
               <?php if($maara != 0){
-                foreach($viat as $key){
-                  foreach($key as $vika){
+                // foreach($viat as $key){
+                //   foreach($key as $vika){
                       ?>
                         <option value="1">Avoin</option>
                         <option value="2">Työn alla</option>
                         <option value="3">Suljettu</option>
                       <?php
                   }
-                }
-              } ?>
+                // }
+              // } ?>
             </select>
             
           </div>
